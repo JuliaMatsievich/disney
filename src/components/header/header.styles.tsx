@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { $mainColor } from "../../styles/variables"
 import { centralContainer } from "../../styles/commonStyles.styles"
 
 export const HeaderHeader = styled.header`
@@ -18,9 +17,5 @@ export const HeaderContainer = styled.div`
 `
 
 export const Img = styled.img`
-  height: 70px;
-`
-
-export const Title = styled.div`
-  font-size: 24px;
+  height: 65px;
 `
