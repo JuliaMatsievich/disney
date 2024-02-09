@@ -1,9 +1,24 @@
+import { ICharacter } from "../../../interface"
 import * as S from "./characterDetailed.styles"
 
-export const CharacterDetailed: React.FC = () => {
+interface ICharacterDetailedProps {
+  character: ICharacter
+}
+
+export const CharacterDetailed: React.FC<ICharacterDetailedProps> = props => {
+  const { character } = props
+
   return (
     <>
-      <S.CharacterDetailedContainer>fkfkfkfk</S.CharacterDetailedContainer>
+      <S.CharacterDetailedContainer>
+        <S.CDImageContainer>
+          <S.CDImage src={character.imageUrl} />
+        </S.CDImageContainer>
+        <S.CDContentContainer>
+          <S.CDSubtitleName>Имя персонажа</S.CDSubtitleName>
+          <S.CDTextName>{character.name}</S.CDTextName>
+        </S.CDContentContainer>
+      </S.CharacterDetailedContainer>
     </>
   )
 }

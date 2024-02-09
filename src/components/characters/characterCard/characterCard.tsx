@@ -11,6 +11,17 @@ interface ICharacterCardProps {
 
 export const CharacterCard: React.FC<ICharacterCardProps> = props => {
   const { character } = props
+
+  const handleClickLike = (e: React.MouseEvent<SVGSVGElement, MouseEvent>) => {
+    e.preventDefault()
+  }
+
+  const handleClickDelete = (
+    e: React.MouseEvent<SVGSVGElement, MouseEvent>,
+  ) => {
+    e.preventDefault()
+  }
+
   return (
     <>
       <S.CardContainer>
@@ -20,8 +31,14 @@ export const CharacterCard: React.FC<ICharacterCardProps> = props => {
         <S.CardContentContainer>
           <S.CardTitle>{truncate(character.name, 12)}</S.CardTitle>
           <S.CardContainerButtons>
-            <FavoriteBorderIcon sx={{ color: "#4781df", cursor: "pointer" }} />
-            <DeleteForeverIcon sx={{ color: "#4781df", cursor: "pointer" }} />
+            <FavoriteBorderIcon
+              sx={{ color: "#4781df", cursor: "pointer" }}
+              onClick={e => handleClickLike(e)}
+            />
+            <DeleteForeverIcon
+              sx={{ color: "#4781df", cursor: "pointer" }}
+              onClick={e => handleClickDelete(e)}
+            />
           </S.CardContainerButtons>
         </S.CardContentContainer>
       </S.CardContainer>

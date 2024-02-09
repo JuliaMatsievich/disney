@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
-import type { IDisneyCharacters } from "../interface"
+import type { IDisneyCharacters, IDisneyOneCharacter } from "../interface"
 import { BASE_URL } from "../constants/url"
 
 export const disneyCharactersApi = createApi({
@@ -14,8 +14,18 @@ export const disneyCharactersApi = createApi({
         method: "GET",
       }),
     }),
+
+    getCharacterById: builder.query<IDisneyOneCharacter, number>({
+      query: id => ({
+        url: `/character/${id}`,
+        method: "GET",
+      }),
+    }),
   }),
 })
 
-export const { useGetAllCharactersQuery, useLazyGetAllCharactersQuery } =
-  disneyCharactersApi
+export const {
+  useGetAllCharactersQuery,
+  useLazyGetAllCharactersQuery,
+  useGetCharacterByIdQuery,
+} = disneyCharactersApi

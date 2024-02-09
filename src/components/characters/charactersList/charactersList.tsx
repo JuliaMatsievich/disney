@@ -12,7 +12,9 @@ export const CharacersList: React.FC = () => {
       <CS.Container>
         <S.ListContainer>
           {characters.map(character => (
-            <CharacterCard key={character._id} character={character} />
+            <S.CardLink to={`/character/${character._id}`}>
+              <CharacterCard key={character._id} character={character} />
+            </S.CardLink>
           ))}
         </S.ListContainer>
       </CS.Container>

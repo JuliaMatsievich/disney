@@ -8,7 +8,11 @@ export const CardContainer = styled.div`
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.11);
   padding: 15px 15px 45px 15px;
   border-radius: 10px;
+  transition: all 0.3s ease 0s;
   cursor: pointer;
+  &:hover {
+    transform: scale(1.02);
+  }
 `
 
 export const CardImageContainer = styled.div`

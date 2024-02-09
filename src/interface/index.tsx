@@ -8,6 +8,13 @@ export interface IDisneyCharacters {
   data: ICharacter[]
 }
 
+export interface IDisneyOneCharacter {
+  info: {
+    count: number
+  }
+  data: ICharacter
+}
+
 export interface ICharacter {
   _id: number
   films: string[]
