@@ -3,7 +3,7 @@ import { useAppDispatch } from "../../hooks/useAppDispatch"
 import { useEffect } from "react"
 import { CharactersList } from "../../components/characters/charactersList/charactersList"
 import { getAllCharacters } from "../../store/slices/charactersSlice"
-import { ButtonFilter } from "../../components/buttonFilter/buttonFilter"
+import { ButtonFilter } from "../../components/buttons/buttonFilter/buttonFilter"
 
 export const MainPage = () => {
   const { data, isLoading, isSuccess, isError } = useGetAllCharactersQuery(null)

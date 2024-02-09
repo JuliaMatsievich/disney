@@ -1,5 +1,9 @@
 import styled from "styled-components"
-import { centralContainer, img } from "../../../styles/commonStyles.styles"
+import {
+  centralContainer,
+  img,
+  link,
+} from "../../../styles/commonStyles.styles"
 import { $mainColor, $titleColor } from "../../../styles/variables"
 import { Link } from "react-router-dom"
 
@@ -60,16 +64,11 @@ export const CDTextConatiner = styled.div`
 `
 
 export const CDLink = styled(Link)`
-  text-decoration: none;
-  cursor: pointer;
+  ${link}
   color: #000;
 
   &:hover {
     color: #1851bb;
     font-weight: 600;
-  }
-  &:visited {
-    text-decoration: none;
-    color: #000;
   }
 `

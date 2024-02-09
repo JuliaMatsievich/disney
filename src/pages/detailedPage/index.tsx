@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { CharacterDetailed } from "../../components/characters/characterDetailed/characterDetailed"
 import { useGetCharacterByIdQuery } from "../../services/disneyCharactersApi"
+import { ButtonBack } from "../../components/buttons/buttonBack/buttonBack"
 
 export const CharacterDetailedPage: React.FC = () => {
   const params = useParams()
@@ -12,7 +13,10 @@ export const CharacterDetailedPage: React.FC = () => {
       {isLoading || character === undefined ? (
         <div>Загрузка...</div>
       ) : (
-        <CharacterDetailed character={character.data} />
+        <>
+          <ButtonBack />
+          <CharacterDetailed character={character.data} />
+        </>
       )}
     </>
   )

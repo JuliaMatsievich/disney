@@ -34,7 +34,6 @@ export const buttonColor = css`
   font-style: normal;
   font-weight: 400;
   padding: 10px 20px;
-  height: 40px;
   transition: all 0.3s ease 0s;
 
   &:hover {
@@ -61,4 +60,8 @@ export const img = css`
   top: 0;
   left: 0;
   object-fit: cover;
+`
+export const link = css`
+  text-decoration: none;
+  cursor: pointer;
 `

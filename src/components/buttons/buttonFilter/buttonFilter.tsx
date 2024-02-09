@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux"
 import * as S from "./buttonFilter.styles"
-import { setFilter } from "../../store/slices/charactersSlice"
-import { useAppSelector } from "../../hooks/useAppSelector"
+import { setFilter } from "../../../store/slices/charactersSlice"
+import { useAppSelector } from "../../../hooks/useAppSelector"
 
 export const ButtonFilter: React.FC = () => {
   const dispatch = useDispatch()

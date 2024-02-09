@@ -1,5 +1,8 @@
 import styled from "styled-components"
-import { buttonColor, centralContainer } from "../../styles/commonStyles.styles"
+import {
+  buttonColor,
+  centralContainer,
+} from "../../../styles/commonStyles.styles"
 
 export const ButtonContainer = styled.div`
   ${centralContainer}
