@@ -31,6 +31,7 @@ body {
   height: 100%;
   font-family: ${$mainFont};
   color: ${$mainFontColor};
+  background-color: #fdfdfd;
 }
 
 button {

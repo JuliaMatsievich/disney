@@ -3,6 +3,7 @@ import { centralContainer } from "../../styles/commonStyles.styles"
 
 export const HeaderHeader = styled.header`
   background: linear-gradient(225deg, rgb(37, 95, 191) 15%, rgb(6, 18, 56));
+  background-image: url(/img/istockphoto-1227029805-170667a.jpg);
   width: 100%;
   margin-bottom: 30px;
 `
