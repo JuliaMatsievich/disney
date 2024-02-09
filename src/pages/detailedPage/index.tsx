@@ -1,5 +1,3 @@
-// import * as S from "./CharacterDetailedPage.styles"
-
 import { useParams } from "react-router-dom"
 import { CharacterDetailed } from "../../components/characters/characterDetailed/characterDetailed"
 import { useGetCharacterByIdQuery } from "../../services/disneyCharactersApi"
