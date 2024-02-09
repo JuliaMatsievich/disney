@@ -4,11 +4,13 @@ import { ICharacter } from "../../interface"
 interface ICharactersState {
   characters: ICharacter[]
   favCharacters: ICharacter[]
+  isFilter: boolean
 }
 
 export const initialState: ICharactersState = {
   characters: [],
   favCharacters: [],
+  isFilter: false,
 }
 
 export const charactersSlice = createSlice({
@@ -37,9 +39,18 @@ export const charactersSlice = createSlice({
         ({ _id }) => _id !== action.payload,
       )
     },
+
+    setFilter(state) {
+      state.isFilter = !state.isFilter
+    },
   },
 })
 
-export const { getAllCharacters, setLike, setDislike, deleteCharacter } =
-  charactersSlice.actions
+export const {
+  getAllCharacters,
+  setLike,
+  setDislike,
+  deleteCharacter,
+  setFilter,
+} = charactersSlice.actions
 export const charactersReducer = charactersSlice.reducer

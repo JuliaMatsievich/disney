@@ -30,7 +30,7 @@ export const buttonColor = css`
   justify-content: center;
   align-items: center;
   color: #fff;
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   padding: 10px 20px;
@@ -39,6 +39,7 @@ export const buttonColor = css`
 
   &:hover {
     background: ${$buttonColorHover};
+    border: 1px solid ${$buttonColorHover};
   }
 
   &:disabled {
