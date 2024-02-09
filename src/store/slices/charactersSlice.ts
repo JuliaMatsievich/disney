@@ -38,6 +38,9 @@ export const charactersSlice = createSlice({
       state.characters = state.characters.filter(
         ({ _id }) => _id !== action.payload,
       )
+      state.favCharacters = state.favCharacters.filter(
+        ({ _id }) => _id !== action.payload,
+      )
     },
 
     setFilter(state) {
