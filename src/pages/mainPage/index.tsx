@@ -6,9 +6,9 @@ import {
   useGetAllCharactersQuery,
   useLazyGetAllCharactersQuery,
 } from "../../services/disneyCharactersApi"
-import { useAppDispatch } from "../../app/hooks"
+import { useAppDispatch } from "../../hooks/useAppDispatch"
 import { useEffect } from "react"
-import { CharacersList } from "../../components/charactersList/charactersList"
+import { CharacersList } from "../../components/characters/charactersList/charactersList"
 import { getAllCharacters } from "../../store/slices/charactersSlice"
 
 export const MainPage = () => {
@@ -19,13 +19,5 @@ export const MainPage = () => {
     isSuccess && dispatch(getAllCharacters({ characters: data.data }))
   }, [data, isSuccess])
 
-  return (
-    <>
-      <Header />
-      <CS.Container>
-        <S.TitleMain>Персонажи Дисней</S.TitleMain>
-        {isLoading ? <div>Загрузка...</div> : <CharacersList />}
-      </CS.Container>
-    </>
-  )
+  return <>{isLoading ? <div>Загрузка...</div> : <CharacersList />}</>
 }
