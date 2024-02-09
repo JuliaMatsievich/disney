@@ -12,7 +12,9 @@ export const CharacterDetailed: React.FC<ICharacterDetailedProps> = props => {
     <>
       <S.CharacterDetailedContainer>
         <S.CDImageContainer>
-          <S.CDImage src={character.imageUrl} />
+          <S.CDImage
+            src={character.imageUrl ? character.imageUrl : "/img/no-foto.png"}
+          />
         </S.CDImageContainer>
         <S.CDContentContainer>
           <S.CDName>{character.name}</S.CDName>

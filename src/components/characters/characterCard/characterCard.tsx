@@ -48,7 +48,9 @@ export const CharacterCard: React.FC<ICharacterCardProps> = props => {
     <>
       <S.CardContainer>
         <S.CardImageContainer>
-          <S.CardImage src={character.imageUrl} />
+          <S.CardImage
+            src={character.imageUrl ? character.imageUrl : "/img/no-foto.png"}
+          />
         </S.CardImageContainer>
         <S.CardContentContainer>
           <S.CardTitle>{truncate(character.name, 12)}</S.CardTitle>
