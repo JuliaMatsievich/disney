@@ -6,7 +6,11 @@ import FavoriteIcon from "@mui/icons-material/Favorite"
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever"
 import { useAppDispatch } from "../../../hooks/useAppDispatch"
 import { useState } from "react"
-import { setDislike, setLike } from "../../../store/slices/charactersSlice"
+import {
+  deleteCharacter,
+  setDislike,
+  setLike,
+} from "../../../store/slices/charactersSlice"
 
 interface ICharacterCardProps {
   character: ICharacter
@@ -37,6 +41,7 @@ export const CharacterCard: React.FC<ICharacterCardProps> = props => {
     e: React.MouseEvent<SVGSVGElement, MouseEvent>,
   ) => {
     e.preventDefault()
+    dispatch(deleteCharacter(character._id))
   }
 
   return (

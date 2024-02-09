@@ -12,8 +12,8 @@ export const CharacersList: React.FC = () => {
       <CS.Container>
         <S.ListContainer>
           {characters.map(character => (
-            <S.CardLink to={`/character/${character._id}`}>
-              <CharacterCard key={character._id} character={character} />
+            <S.CardLink to={`/character/${character._id}`} key={character._id}>
+              <CharacterCard character={character} />
             </S.CardLink>
           ))}
         </S.ListContainer>

@@ -22,18 +22,24 @@ export const charactersSlice = createSlice({
       state.characters = action.payload.characters
     },
 
-    setLike(state, action) {
+    setLike(state, action: PayloadAction<ICharacter>) {
       state.favCharacters.push(action.payload)
     },
 
-    setDislike(state, action) {
-      console.log(action.payload)
+    setDislike(state, action: PayloadAction<number>) {
       state.favCharacters = state.favCharacters.filter(
+        ({ _id }) => _id !== action.payload,
+      )
+    },
+
+    deleteCharacter(state, action: PayloadAction<number>) {
+      state.characters = state.characters.filter(
         ({ _id }) => _id !== action.payload,
       )
     },
   },
 })
 
-export const { getAllCharacters, setLike, setDislike } = charactersSlice.actions
+export const { getAllCharacters, setLike, setDislike, deleteCharacter } =
+  charactersSlice.actions
 export const charactersReducer = charactersSlice.reducer
