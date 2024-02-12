@@ -7,7 +7,7 @@ export const Header: React.FC = () => {
       <S.HeaderHeader>
         <CS.Container>
           <S.HeaderContainer>
-            <S.Img src="/img/Disney-logo-white-png.png"></S.Img>
+            <S.Img src="/disney/img/Disney-logo-white-png.png"></S.Img>
           </S.HeaderContainer>
         </CS.Container>
       </S.HeaderHeader>
