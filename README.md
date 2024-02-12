@@ -1,27 +1,59 @@
-# vite-template-redux
+# Проект Disney
 
-Uses [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), and [React Testing Library](https://github.com/testing-library/react-testing-library) to create a modern [React](https://react.dev/) app compatible with [Create React App](https://create-react-app.dev/)
+Тестовое задание
 
-```sh
-npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
+## ТЗ проекта
+
+Создать SPA со списком карточек, на каждой из которых выводится картинка и любая информация на ваш вкус, которая пришла с эндпоинта. 
+Для задачи можно выбрать любое публичное api, например, отсюда https://github.com/public-apis/public-apis
+Каким должно быть приложение?
+Пришедшие данные хранятся в сторе.
+На карточке должна быть иконка лайка. При нажатии на которую, ставится или убирается лайк. Иконка должна подкрашиваться, когда залайкана.
+На карточке должна быть иконка удаления. При нажатии на которую, карточка удаляется.
+Сверху должна быть кнопка фильтра, которая по нажатию показывает только залайканые карточки. При отжатии опять показываются все карточки. 
+контент карточки(текст) должен быть урезан,чтобы у карчточек была одинаковая высота
+при клике на любом месте карточке(кроме иконки лайка и кнопки удаления) мы должно попадать на отдельную страницу карточки. Уже в нем мы видим полный текст карточки.Так же на этой странице должна быть кнопка вернуться к списку карточек
+
+Дизайн не важен, главное, чтобы было просто и аккуратно. По стэку ориентируемся на список ниже. Остальные решения на вас.
+Стэк:
+Typescript
+React
+Redux-toolkit(rtk-query)
+В каком формате сдавать ?
+Ссылка на GitHub + проект выложенный на GitHub Pages
+
+
+## Сайт приложения
+
+https://juliamatsievich.github.io/search-git-users/
+
+## Использованные технологии
+
+- Typescript
+- React
+- Styled Components
+- RTK Query
+- React Router
+- Redux Toolkit
+
+В качестве сборщика: Vite
+
+## Как запустить проект
+
+1. Клонировать репозиторий
+
+```
+git clone https://github.com/JuliaMatsievich/disney
 ```
 
-## Goals
+2. Установить необходимые зависимости
 
-- Easy migration from Create React App or Vite
-- As beginner friendly as Create React App
-- Optimized performance compared to Create React App
-- Customizable without ejecting
+```
+npm install
+```
 
-## Scripts
+3. Запустить приложение с помощью следующей команды
 
-- `dev`/`start` - start dev server and open browser
-- `build` - build for production
-- `preview` - locally preview production build
-- `test` - launch test runner
-
-## Inspiration
-
-- [Create React App](https://github.com/facebook/create-react-app/tree/main/packages/cra-template)
-- [Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react)
-- [Vitest](https://github.com/vitest-dev/vitest/tree/main/examples/react-testing-lib)
+```
+npm run start
+```
