@@ -25,7 +25,7 @@ Redux-toolkit(rtk-query)
 
 ## Сайт приложения
 
-https://juliamatsievich.github.io/search-git-users/
+https://juliamatsievich.github.io/disney/
 
 ## Использованные технологии
 
